@@ -3,6 +3,7 @@ body {
     background-color: #1e1f20;
     margin: 0;
     padding: 0;
+    text-align: center;
     box-sizing: border-box;
     font-size: 1rem; /* Tüm metinler, ekran boyutuna göre orantılı olacaktır */
   }
@@ -22,6 +23,7 @@ body {
   
   .cointainer {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap; /* Ekran boyutuna göre öğeler alt alta geçebilir */
     margin-top: 1%;
   }
@@ -52,7 +54,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1; /* Başlangıçta görünür */
+    opacity: 0; /* Başlangıçta görünür */
     transition: 0.5s ease;
   }
   
