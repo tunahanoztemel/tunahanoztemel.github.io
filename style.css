@@ -13,15 +13,15 @@ body {
 }
 
 .all {
-  margin-top: 40px;
-  width: 90%;
+  margin-top: 30px;
+  width: 100%;
 }
 
 .baslık {
     color: white;
     font-size: 10px;
     font-weight: bold;
-    margin-left: 15%;
+    margin-left: 5%;
     padding: 7px;
 
 }
@@ -33,12 +33,11 @@ body {
 
 .left{
   margin-top: -1%;
-    margin-left: 15%;
+    margin-left: 5%;
     max-width: 50%;
 }
 
 .left>p {
-    max-width: 75%;
     color: white;
     padding: 5px;
     border-radius: 10px;
@@ -51,7 +50,7 @@ body {
 }
 
 .right{
-    margin-left: 1px;
+    margin-left: 2%;
 }
 
 .right>a{
@@ -61,7 +60,7 @@ body {
 }
 
 a.btn {
-    font-size: 21px;
+    font-size: 20px;
     background: transparent;
     border: none;
     padding: 1em 1.5em;
