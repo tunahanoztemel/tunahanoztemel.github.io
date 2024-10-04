@@ -1,0 +1,249 @@
+body {
+    font-family: 'MADE Carving Soft', sans-serif;
+    background-color: #1e1f20;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem; /* Tüm metinler, ekran boyutuna göre orantılı olacaktır */
+  }
+  
+  .all {
+    margin-top: 5px;
+    width: 100%;
+  }
+  
+  .baslık {
+    color: white;
+    font-size: 3rem; /* Yüzde veya rem kullanarak font boyutunu ayarlayabilirsin */
+    font-weight: bold;
+    margin-left: 5%;
+    padding: 1px;
+  }
+  
+  .cointainer {
+    display: flex;
+    flex-wrap: wrap; /* Ekran boyutuna göre öğeler alt alta geçebilir */
+    margin-top: 1%;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%; /* % kullanarak genişlik dinamik olur */
+    max-width: 37%; /* Maksimum genişlik ayarla */
+    margin: 1% auto;
+  }
+  
+  .image-container > img {
+    width: 100%; /* Görüntü her ekrana tam oturacak */
+    height: auto;
+    transition: filter 0.5s ease; /* Blur efektini geçişli yap */
+    margin-bottom: 50px; /* Butonlarla resim arasına boşluk ekler */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.2rem; /* Responsive metin boyutu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Başlangıçta görünür */
+    transition: 0.5s ease;
+  }
+  
+  /* Mobil görünüm için ek stil */
+  .image-container:focus img {
+    filter: blur(5px);
+  }
+  
+  .image-container:focus .overlay {
+    opacity: 1;
+  }
+  
+  .right {
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .right>a {
+    font-size: 1.2rem;
+    background: transparent;
+    color: #ffedd3;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .baslık {
+      font-size: 2rem; /* Küçük ekranlar için yazı boyutunu küçült */
+    }
+  
+    .image-container {
+      max-width: 80%; /* Mobilde daha büyük görünsün */
+    }
+  
+    .right {
+      margin-left: 0;
+      align-items: center;
+    }
+  
+    .right>a {
+      font-size: 1rem;
+    }
+  }
+  a.btn {
+    font-size: 22px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+    text-decoration: none; /* Link alt çizgisini kaldır */
+  }
+  
+  a.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffc506;
+    transition: 0.5s ease;
+  }
+  
+  a.btn:hover {
+    color: #1e1e2b;
+    transition-delay: 0.5s;
+  }
+  
+  a.btn:hover::before {
+    width: 100%;
+  }
+  
+  a.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: 0.4s ease;
+    z-index: -1;
+  }
+  
+  a.btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+  }
+  
+  
+  footer {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    bottom: 20px;  
+    right: 20px;
+  }
+  
+  /* From Uiverse.io by vinodjangid07 */ 
+  .card {
+  width: fit-content;
+  height: fit-content;
+  background-color: #1e1f20;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 5px 5px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  flex-direction: column;
+  }
+  
+  .socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+  }
+  
+  .socialSvg {
+  width: 17px;
+  }
+  
+  .socialSvg path {
+  fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .image-container>.overlay>p {
+      font-size: 0.8rem; /* Küçük ekranlarda yazı boyutunu küçült */
+      word-wrap: break-word; /* Uzun kelimelerin taşmasını önle */
+      text-align: center; /* Yazıyı ortala */
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .overlay {
+      padding: 10px;
+    }
+  }
+
+  
